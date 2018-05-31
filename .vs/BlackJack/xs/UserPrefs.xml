@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{1C3F804E-967D-4311-A748-C5E40046649C}|Default">
+  <MonoDevelop.Ide.ItemProperties.BlackJack.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6DDEA7E9-D934-4925-BB38-5F852F44AFC3">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam />
+  </MonoDevelop.Ide.ItemProperties.BlackJack.iOS>
+  <MonoDevelop.Ide.Workbench ActiveDocument="BlackJack/MyClass.cs">
+    <Files>
+      <File FileName="iOS/ViewController.cs" Line="1" Column="1" />
+      <File FileName="BlackJack/MyClass.cs" Line="10" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.BlackJack.Droid FirstBuild="True" />
+</Properties>
