@@ -1,27 +1,32 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using System;
+using Android.Content;
+using Android.Content.PM;
+using BlackJack.Droid;
 
-namespace BlackJack.Droid
+namespace BlackJack
 {
-    [Activity(Label = "Black Jack", MainLauncher = true, Icon = "@mipmap/icon")]
+    [Activity(Theme = "@android:style/Theme.Holo.NoActionBar.Fullscreen", ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : Activity
     {
-        int count = 1;
-
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            // Get our button from the layout resource,
-            // and attach an event to it
-            Button button = FindViewById<Button>(Resource.Id.myButton);
+            Button buttonGame = FindViewById<Button>(Resource.Id.ButtonGame);
 
-            button.Click += delegate { button.Text = $"{count++} clicks!"; };
+            buttonGame.Click += ButtonGame_Click;
+
+        }
+
+        private void ButtonGame_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(GameActivity));
+            StartActivity(intent);
         }
     }
 }
-

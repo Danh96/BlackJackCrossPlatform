@@ -53,6 +53,10 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CardView.cs" />
+    <Compile Include="GameActivity.cs" />
+    <Compile Include="EndGameActivity.cs" />
+    <Compile Include="SplashScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -67,6 +71,26 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\layout\Game.axml" />
+    <AndroidResource Include="Resources\layout\EndGame.axml" />
+    <AndroidResource Include="Resources\layout\CardTemplate.axml" />
+    <AndroidResource Include="Resources\drawable\AppLogo.png" />
+    <AndroidResource Include="Resources\drawable\Background.jpg" />
+    <AndroidResource Include="Resources\drawable\CardBack.png" />
+    <AndroidResource Include="Resources\drawable\Clubs.png" />
+    <AndroidResource Include="Resources\drawable\Diamonds.png" />
+    <AndroidResource Include="Resources\drawable\Hearts.png" />
+    <AndroidResource Include="Resources\drawable\Logo.png" />
+    <AndroidResource Include="Resources\drawable\Spades.png" />
+    <AndroidResource Include="Resources\drawable\ButtonClicked.xml" />
+    <AndroidResource Include="Resources\drawable\ButtonClickedState.xml" />
+    <AndroidResource Include="Resources\drawable\ButtonDefault.xml" />
+    <AndroidResource Include="Resources\drawable\CardBackground.xml" />
+    <AndroidResource Include="Resources\drawable\SplashScreen.xml" />
+    <AndroidResource Include="Resources\values\Styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

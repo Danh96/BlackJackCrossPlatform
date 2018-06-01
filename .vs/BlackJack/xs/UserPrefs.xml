@@ -1,10 +1,22 @@
-﻿<Properties StartupConfiguration="{1C3F804E-967D-4311-A748-C5E40046649C}|Default">
+﻿<Properties StartupConfiguration="{0A453088-143D-4C99-AD37-DD61BA38306A}|Default">
   <MonoDevelop.Ide.ItemProperties.BlackJack.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6DDEA7E9-D934-4925-BB38-5F852F44AFC3">
     <MonoDevelop.MacDev.AppleDevelopmentTeam />
   </MonoDevelop.Ide.ItemProperties.BlackJack.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="BlackJack/GameFunctions.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/Resources/values/Styles.xml">
     <Files>
-      <File FileName="BlackJack/GameFunctions.cs" Line="94" Column="35" />
+      <File FileName="BlackJack/GameFunctions.cs" Line="203" Column="6" />
+      <File FileName="Droid/Resources/drawable/ButtonClicked.xml" Line="7" Column="9" />
+      <File FileName="Droid/Resources/drawable/ButtonClickedState.xml" Line="5" Column="12" />
+      <File FileName="Droid/Resources/drawable/ButtonDefault.xml" Line="7" Column="9" />
+      <File FileName="Droid/Resources/drawable/CardBackground.xml" Line="7" Column="9" />
+      <File FileName="Droid/Resources/drawable/SplashScreen.xml" Line="12" Column="14" />
+      <File FileName="Droid/MainActivity.cs" Line="28" Column="61" />
+      <File FileName="Droid/CardView.cs" Line="43" Column="10" />
+      <File FileName="Droid/GameActivity.cs" Line="92" Column="1" />
+      <File FileName="Droid/EndGameActivity.cs" Line="28" Column="81" />
+      <File FileName="Droid/SplashScreen.cs" Line="10" Column="43" />
+      <File FileName="Droid/obj/Debug/android/manifest/AndroidManifest.xml" Line="15" Column="23" />
+      <File FileName="Droid/Resources/values/Styles.xml" Line="14" Column="13" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -13,4 +25,5 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.BlackJack.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Nexus_5X_API_25" />
 </Properties>

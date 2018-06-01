@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:weightSum="3">
+    <LinearLayout
+        android:id="@+id/ScoreBar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DF2020"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_weight="0.2">
+        <TextView
+            android:id="@+id/PlayerGameScore"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            tools:text="Players score: 0" />
+        <TextView
+            android:id="@+id/DealerGameScore"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            tools:text="Dealers score: 0" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@id/ScoreBar"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_weight="2.4">
+        <TextView
+            android:id="@+id/DealersHandText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:textColor="#ffffff"
+            tools:text="Dealers hand total: " />
+        <LinearLayout
+            android:id="@+id/DealersHand"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center">
+            <BlackJack.CardView
+                android:id="@+id/DealersFirstCard"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1" />
+            <BlackJack.CardView
+                android:id="@+id/DealersSecondCard"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1" />
+            <BlackJack.CardView
+                android:id="@+id/DealersThirdCard"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1" />
+            <BlackJack.CardView
+                android:id="@+id/DealersFourthCard"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1" />
+            <BlackJack.CardView
+                android:id="@+id/DealersFifthCard"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/ConvoText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            tools:text="Convo Text" />
+        <TextView
+            android:id="@+id/PlayersHandText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:textColor="#ffffff"
+            tools:text="Your hand total: " />
+        <LinearLayout
+            android:id="@+id/PlayersHand"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center">
+            <BlackJack.CardView
+                android:id="@+id/PlayersFirstCard"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1" />
+            <BlackJack.CardView
+                android:id="@+id/PlayersSecondCard"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1" />
+            <BlackJack.CardView
+                android:id="@+id/PlayersThirdCard"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1" />
+            <BlackJack.CardView
+                android:id="@+id/PlayersFourthCard"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1" />
+            <BlackJack.CardView
+                android:id="@+id/PlayersFifthCard"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bottom_panel"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_weight="0.4"
+        android:gravity="center">
+        <Button
+            android:id="@+id/ButtonStick"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:text="Stick"
+            android:background="@drawable/buttonclickedstate" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/ButtonHit"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:text="Hit"
+            android:background="@drawable/buttonclickedstate" />
+    </LinearLayout>
+</LinearLayout>

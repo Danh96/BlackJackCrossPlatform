@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LayoutCard"
+    android:layout_width="60dp"
+    android:layout_height="90dp"
+    android:background="@drawable/CardBackground"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/TopLeftChar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="left|top"
+        android:paddingLeft="8dp"
+        android:paddingTop="6dp"
+        tools:text="A"
+        android:textColor="#000000"
+        android:textSize="14dp" />
+    <ImageView
+        android:id="@+id/SuitImage"
+        android:layout_height="15dp"
+        android:layout_width="30dp"
+        android:layout_gravity="center" />
+    <TextView
+        android:id="@+id/BottomRightChar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="right|bottom"
+        android:paddingBottom="6dp"
+        android:paddingRight="8dp"
+        tools:text="A"
+        android:textColor="#000000"
+        android:textSize="14dp" />
+</LinearLayout>
