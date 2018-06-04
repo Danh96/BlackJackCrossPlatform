@@ -1,22 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Threading;
 using System.Threading.Tasks;
 using DeckOfCards;
 
 namespace BlackJackIOS
 {
-	public class GameFunctions
+    public class GameFunctions : INotifyPropertyChanged
 	{
-		public CancellationTokenSource CancellationToken;
+        public event PropertyChangedEventHandler PropertyChanged;
 
-		private Action<List<Card>> PrintDealersHand;
-		private Action<List<Card>> PrintPlayersHand;
-        
-		private PlayingCardDeck Deck;
+        public CancellationTokenSource CancellationToken;
 
-		private List<Card> PlayersHand = new List<Card>();
-		private List<Card> DealersHand = new List<Card>();
+		public List<Card> PlayersHand = new List<Card>();
+		public List<Card> DealersHand = new List<Card>();
 
 		public int DealersHandTotal { get; private set; }
 		public int PlayersHandTotal { get; private set; }
@@ -28,33 +26,42 @@ namespace BlackJackIOS
 		public string DealerScoreText { get; private set; }
 		public string PlayersHandTotalText { get; private set; }
 		public string DealersHandTotalText { get; private set; }
-		public string ConvoTextText { get; private set; }
+		public string ConvoText { get; private set; }
 
 		public readonly string PopUpTitle = "New Game";
 		public readonly string PopUpInfo = "Please select the number of points you want to play to.";
 
-		public bool IsHitButtonEnabled { get; private set; }
-		public bool IsStickButtonEnabled { get; private set; }
+        public bool ButtonsEnabled { get; private set; }
 		public bool GameContinues { get; private set; }
 
-		public GameFunctions(Action<List<Card>> printDealersHand, Action<List<Card>> printPlayersHand)
-		{
-			PrintDealersHand = printDealersHand;
-			PrintPlayersHand = printPlayersHand;
-		}
+        private PlayingCardDeck Deck;
 
-		private string PlayerHit()
+        private void HandlePropertyChanged(string name)
+        {
+            PropertyChanged.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+
+        public async Task PlayerHit()
 		{
 			PlayersHand.Add(Deck.RemoveTopCard());
 			PlayersHandTotal = UpdateScore(PlayersHand);
-			return "Players hand total: " + PlayersHandTotal.ToString();
+            await CheckIfBust();
+            await CheckIfPlayerHasFiveCardTrick();
+            PlayersHandTotalText = "Players hand total: " + PlayersHandTotal.ToString();
 		}
+
+        public async Task PlayerStick()
+        {
+            ButtonsEnabled = false;
+
+            await DealersTurn();
+        }
         
-		private void ResetGame()
+		public void ResetGame()
 		{
 		    DealersHandTotalText = string.Empty;
 		    PlayersHandTotalText = string.Empty;
-		    ConvoTextText = string.Empty;
+		    ConvoText = string.Empty;
 		    DealerGameScore = 0;
 		    PlayerGameScore = 0;
 		    DealerScoreText = "Dealers score: " + DealerGameScore.ToString();
@@ -73,8 +80,7 @@ namespace BlackJackIOS
 			DealersHandTotal = 0;
 			DealersHand.Clear();
 
-			IsHitButtonEnabled = true;
-			IsStickButtonEnabled = true;
+			ButtonsEnabled = true;
 
 			PlayerScoreText = "Players score: " + PlayerGameScore.ToString();
 			DealerScoreText = "Dealers score: " + DealerGameScore.ToString();
@@ -86,12 +92,12 @@ namespace BlackJackIOS
 
 			DealersHandTotalText = "Dealers hand total: " + DealersHandTotal;
 
-			PrintPlayersHand(PlayersHand);
+            HandlePropertyChanged(nameof(PlayersHand));
 
 			PlayersHandTotal = UpdateScore(PlayersHand);
 			PlayersHandTotalText = "Players hand total: " + PlayersHandTotal.ToString();
 
-			ConvoTextText = "Players turn";
+			ConvoText = "Players turn";
 		}
 
 		private int UpdateScore(List<Card> hand)
@@ -147,8 +153,7 @@ namespace BlackJackIOS
 					{
 						PlayersHandTotal = -1;
 						PlayersHandTotalText = "Players hand total: Bust!";
-						IsHitButtonEnabled = false;
-						IsStickButtonEnabled = false;
+						ButtonsEnabled = false;
 						await DealersTurn();
 					}
 
@@ -171,8 +176,7 @@ namespace BlackJackIOS
 			{
 				if (PlayersHand.Count == 5 && PlayersHandTotal != -1 && !CancellationToken.IsCancellationRequested)
 				{
-					IsHitButtonEnabled = false;
-					IsStickButtonEnabled = false;
+					ButtonsEnabled = false;
 					PlayersHandTotalText = "Players hand total: Five cards under!";
 					PlayersHandTotal = 100;
 					await DealersTurn();
@@ -193,7 +197,7 @@ namespace BlackJackIOS
 			}
 		}
         
-		public async Task DealersTurn()
+        private async Task DealersTurn()
 		{
 			try
 			{
@@ -202,7 +206,7 @@ namespace BlackJackIOS
 					bool dealersTurn = true;
 
 					await Task.Delay(1000, CancellationToken.Token);
-					ConvoTextText = "Dealers turn";
+					ConvoText = "Dealers turn";
 					await Task.Delay(2000, CancellationToken.Token);
 
 					PrintDealersHand(DealersHand);
@@ -236,7 +240,7 @@ namespace BlackJackIOS
 					await UpdateGameScore();
 				}
 			}
-			catch (System.OperationCanceledException)
+			catch (OperationCanceledException)
 			{
 
 			}
@@ -252,18 +256,18 @@ namespace BlackJackIOS
 					{
 						PlayerGameScore++;
 						PlayerScoreText = "Players score: " + PlayerGameScore.ToString();
-						ConvoTextText = "Players hand wins.";
+						ConvoText = "Players hand wins.";
 					}
 					else if (PlayersHandTotal < DealersHandTotal)
 					{
 						DealerGameScore++;
 						DealerScoreText = "Dealers score: " + DealerGameScore.ToString();
-						ConvoTextText = "Dealers hand wins.";
+						ConvoText = "Dealers hand wins.";
 					}
 					else if (PlayersHandTotal == DealersHandTotal)
 					{
 						DealerGameScore++;
-						ConvoTextText = "Draw, points go to dealer.";
+						ConvoText = "Draw, points go to dealer.";
 					}
 
 					await Task.Delay(2000, CancellationToken.Token);
@@ -288,7 +292,7 @@ namespace BlackJackIOS
 					}
 					else
 					{
-						ConvoTextText = "Next Round!";
+						ConvoText = "Next Round!";
 						await Task.Delay(1000, CancellationToken.Token);
 						GameStart();
 					}
