@@ -18,9 +18,7 @@ namespace BlackJack
 {
 	[Activity(Label = "Game", Theme = "@android:style/Theme.Holo.NoActionBar.Fullscreen", ScreenOrientation = ScreenOrientation.Portrait)]
 	public class GameActivity : Activity
-	{      
-		private CancellationTokenSource CancellationToken;
-
+	{
         private GameFunctions gameFunctions = new GameFunctions();
 
 		private MediaPlayer _player = new MediaPlayer();
@@ -75,16 +73,19 @@ namespace BlackJack
 
             buttonStick.Click += StickButton_Click;
             buttonHit.Click += HitButton_Click;
+
+            SetCardsToInvisible();
+            SelectMatchPointsDialogPopUp();
 		}
 
-		private void HitButton_Click(object sender, EventArgs e)
+		private async void HitButton_Click(object sender, EventArgs e)
 		{
-			throw new NotImplementedException();
-		}
+            await gameFunctions.PlayerHit();
+        }
 
-		private void StickButton_Click(object sender, EventArgs e)
+		private async void StickButton_Click(object sender, EventArgs e)
 		{
-			throw new NotImplementedException();
+            await gameFunctions.PlayerStick();
 		}
 
 		protected override void OnPause()
@@ -127,6 +128,14 @@ namespace BlackJack
             else if (string.Equals(nameof(gameFunctions.GameContinues), e.PropertyName))
             {
                 //TODO implement end game screen navigation here!
+            }
+            else if (string.Equals(nameof(gameFunctions.PlayersHand), e.PropertyName))
+            {
+                PrintPlayerHand(gameFunctions.PlayersHand);
+            }
+            else if (string.Equals(nameof(gameFunctions.DealersHand), e.PropertyName))
+            {
+                PrintDealersHand(gameFunctions.DealersHand);
             }
         }
 
@@ -234,6 +243,58 @@ namespace BlackJack
                         break;
                 }
             }
+        }
+
+        private void SelectMatchPointsDialogPopUp()
+        {
+            var MatchPointAlert = (new AlertDialog.Builder(this)).Create();
+            MatchPointAlert.SetCancelable(false);
+            MatchPointAlert.SetMessage("Please select the number of points you want to play to.");
+            MatchPointAlert.SetTitle("New Game");
+            MatchPointAlert.SetButton("10 points", SetMatchPointsToTen);
+            MatchPointAlert.SetButton2("3 points", SetMatchPointsToThree);
+            MatchPointAlert.SetButton3("5 points", SetMatchPointsToFive);
+            MatchPointAlert.Show();
+
+            StyleAlertDialog(MatchPointAlert);
+        }
+
+        private static void StyleAlertDialog(Dialog dialog)
+        {
+            try
+            {
+                var resources = dialog.Context.Resources;
+
+                var alertTitleId = resources.GetIdentifier("alertTitle", "id", "android");
+                var alertTitle = (TextView)dialog.Window.DecorView.FindViewById(alertTitleId);
+                alertTitle.SetTextColor(Android.Graphics.Color.Red);
+
+                var titleDividerId = resources.GetIdentifier("titleDivider", "id", "android");
+                var titleDivider = dialog.Window.DecorView.FindViewById(titleDividerId);
+                titleDivider.SetBackgroundColor(Android.Graphics.Color.Red);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+        private void SetMatchPointsToTen(object sender, DialogClickEventArgs e)
+        {
+            gameFunctions.SetMaxMatchPoint(10);
+            //StartShufflePlayer();
+        }
+
+        private void SetMatchPointsToFive(object sender, DialogClickEventArgs e)
+        {
+            gameFunctions.SetMaxMatchPoint(5);
+            //StartShufflePlayer();
+        }
+
+        private void SetMatchPointsToThree(object sender, DialogClickEventArgs e)
+        {
+            gameFunctions.SetMaxMatchPoint(3);
+            //StartShufflePlayer();
         }
 	}
 }

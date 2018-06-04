@@ -2,10 +2,10 @@
   <MonoDevelop.Ide.ItemProperties.BlackJack.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6DDEA7E9-D934-4925-BB38-5F852F44AFC3">
     <MonoDevelop.MacDev.AppleDevelopmentTeam />
   </MonoDevelop.Ide.ItemProperties.BlackJack.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/GameActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BlackJack/GameFunctions.cs">
     <Files>
-      <File FileName="Droid/GameActivity.cs" Line="124" Column="31" />
-      <File FileName="BlackJack/GameFunctions.cs" Line="43" Column="40" />
+      <File FileName="Droid/GameActivity.cs" Line="79" Column="4" />
+      <File FileName="BlackJack/GameFunctions.cs" Line="113" Column="89" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

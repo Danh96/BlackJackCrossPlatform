@@ -8,7 +8,7 @@ using DeckOfCards;
 namespace BlackJackIOS
 {
     public class GameFunctions : INotifyPropertyChanged
-	{
+    {
         public event PropertyChangedEventHandler PropertyChanged;
 
         public CancellationTokenSource CancellationToken;
@@ -22,29 +22,93 @@ namespace BlackJackIOS
 		public int PlayerGameScore { get; private set; }
 		public int MaxMatchPoint { get; private set; }
 
-		public string PlayerScoreText { get; private set; }
-		public string DealerScoreText { get; private set; }
-		public string PlayersHandTotalText { get; private set; }
-		public string DealersHandTotalText { get; private set; }
-		public string ConvoText { get; private set; }
+        public readonly string PopUpTitle = "New Game";
+        public readonly string PopUpInfo = "Please select the number of points you want to play to.";
 
-		public readonly string PopUpTitle = "New Game";
-		public readonly string PopUpInfo = "Please select the number of points you want to play to.";
+        public string PlayerScoreText
+        {
+            get { return _playerScoreText; }
+            set
+            {
+                _playerScoreText = value;
+                HandlePropertyChanged(nameof(PlayerScoreText));
+            }
+        }
 
-        public bool ButtonsEnabled { get; private set; }
-		public bool GameContinues { get; private set; }
+        public string DealerScoreText
+        {
+            get { return _dealerScoreText; }
+            set
+            {
+                _dealerScoreText = value;
+                HandlePropertyChanged(nameof(DealerScoreText));
+            }
+        }
+
+        public string PlayersHandTotalText
+        {
+            get { return _playersHandTotalText; }
+            set
+            {
+                _playersHandTotalText = value;
+                HandlePropertyChanged(nameof(PlayersHandTotalText));
+            }
+        }
+
+        public string DealersHandTotalText
+        {
+            get { return _dealersHandTotalText; }
+            set
+            {
+                _dealersHandTotalText = value;
+                HandlePropertyChanged(nameof(DealersHandTotalText));
+            }
+        }
+
+        public string ConvoText
+        {
+            get { return _convoText; }
+            set
+            {
+                _convoText = value;
+                HandlePropertyChanged(nameof(ConvoText));
+            }
+        }
+
+        public bool ButtonsEnabled
+        {
+            get { return _buttonsEnabled; }
+            set
+            {
+                _buttonsEnabled = value;
+                HandlePropertyChanged(nameof(ButtonsEnabled));
+            }
+        }
+
+        public bool GameContinues
+        {
+            get { return _gameContinues; }
+            set
+            {
+                _gameContinues = value;
+                HandlePropertyChanged(nameof(GameContinues));
+            }
+        }
 
         private PlayingCardDeck Deck;
-
-        private void HandlePropertyChanged(string name)
-        {
-            PropertyChanged.Invoke(this, new PropertyChangedEventArgs(name));
-        }
+        private string _playerScoreText;
+        private string _dealerScoreText;
+        private string _playersHandTotalText;
+        private string _dealersHandTotalText;
+        private string _convoText;
+        private bool _buttonsEnabled;
+        private bool _gameContinues;
 
         public async Task PlayerHit()
 		{
 			PlayersHand.Add(Deck.RemoveTopCard());
 			PlayersHandTotal = UpdateScore(PlayersHand);
+            HandlePropertyChanged(nameof(PlayersHand));
             await CheckIfBust();
             await CheckIfPlayerHasFiveCardTrick();
             PlayersHandTotalText = "Players hand total: " + PlayersHandTotal.ToString();
@@ -67,6 +131,12 @@ namespace BlackJackIOS
 		    DealerScoreText = "Dealers score: " + DealerGameScore.ToString();
 		    PlayerScoreText = "Players score: " + PlayerGameScore.ToString();
 		}
+
+        public void SetMaxMatchPoint(int maxMatchPoint)
+        {
+            MaxMatchPoint = maxMatchPoint;
+            GameStart();
+        }
 
 		private void GameStart()
 		{
@@ -164,7 +234,7 @@ namespace BlackJackIOS
 					}
 				}
 			}
-			catch (System.OperationCanceledException)
+			catch (OperationCanceledException)
 			{
 
 			}
@@ -182,7 +252,7 @@ namespace BlackJackIOS
 					await DealersTurn();
 				}
 			}
-			catch (System.OperationCanceledException)
+			catch (OperationCanceledException)
 			{
 
 			}
@@ -209,7 +279,7 @@ namespace BlackJackIOS
 					ConvoText = "Dealers turn";
 					await Task.Delay(2000, CancellationToken.Token);
 
-					PrintDealersHand(DealersHand);
+                    HandlePropertyChanged(nameof(DealersHand));
 					DealersHandTotal = UpdateScore(DealersHand);
 					DealersHandTotalText = "Dealers hand total: " + DealersHandTotal;
 
@@ -223,7 +293,7 @@ namespace BlackJackIOS
 						{
 							await Task.Delay(1000);
 							DealersHand.Add(Deck.RemoveTopCard());
-							PrintDealersHand(DealersHand);
+                            HandlePropertyChanged(nameof(DealersHand));
 							DealersHandTotal = UpdateScore(DealersHand);
 							DealersHandTotalText = "Dealers hand total: " + DealersHandTotal;
 							await CheckIfBust();
@@ -246,7 +316,7 @@ namespace BlackJackIOS
 			}
 		}
         
-		public async Task UpdateGameScore()
+        private async Task UpdateGameScore()
 		{
 			try
 			{
@@ -274,40 +344,39 @@ namespace BlackJackIOS
 					await CheckIfGameContinues();
 				}
 			}
-			catch (System.OperationCanceledException)
+			catch (OperationCanceledException)
 			{
 
 			}
 		}
 
-		private async Task CheckIfGameContinues()
-		{
-			try
-			{
-				if (!CancellationToken.IsCancellationRequested)
-				{
-					if (PlayerGameScore == MaxMatchPoint || DealerGameScore == MaxMatchPoint)
-					{
-						GameContinues = false;
-					}
-					else
-					{
-						ConvoText = "Next Round!";
-						await Task.Delay(1000, CancellationToken.Token);
-						GameStart();
-					}
-				}
-			}
-			catch (System.OperationCanceledException)
-			{
+        private async Task CheckIfGameContinues()
+        {
+            try
+            {
+                if (!CancellationToken.IsCancellationRequested)
+                {
+                    if (PlayerGameScore == MaxMatchPoint || DealerGameScore == MaxMatchPoint)
+                    {
+                        GameContinues = false;
+                    }
+                    else
+                    {
+                        ConvoText = "Next Round!";
+                        await Task.Delay(1000, CancellationToken.Token);
+                        GameStart();
+                    }
+                }
+            }
+            catch (OperationCanceledException)
+            {
 
-			}
-		}
+            }
+        }
 
-		public void SetMaxMatchPoint(int maxMatchPoint)
-		{
-			MaxMatchPoint = maxMatchPoint;
-			GameStart();
-		}
+        private void HandlePropertyChanged(string name)
+        {
+            PropertyChanged.Invoke(this, new PropertyChangedEventArgs(name));
+        }
 	}
 }
