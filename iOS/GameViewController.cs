@@ -17,11 +17,6 @@ namespace BlackJackIOS
         
 		private SystemSound shuffleSound = new SystemSound(NSUrl.FromFilename("Sounds/ShuffleSound.mp3"));
 
-		public GameViewController (IntPtr handle) : base (handle)
-		{
-			
-		}
-
 		public override void ViewDidDisappear(bool animated)
 		{
 			base.ViewDidDisappear(animated);
