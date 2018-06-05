@@ -98,6 +98,9 @@
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="EndGame.storyboard" />
+    <InterfaceDefinition Include="Game.storyboard" />
+    <InterfaceDefinition Include="PlayingCard.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -110,6 +113,12 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="EndGameViewController.cs" />
+    <Compile Include="EndGameViewController.designer.cs" />
+    <Compile Include="GameViewController.cs" />
+    <Compile Include="GameViewController.designer.cs" />
+    <Compile Include="PlayingCard.cs" />
+    <Compile Include="PlayingCard.designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Sounds\ShuffleSound.mp3" />

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--End Game View Controller-->
+        <scene sceneID="TEb-NK-x7d">
+            <objects>
+                <viewController storyboardIdentifier="EndGameViewController" id="ZsZ-Vs-c2Q" customClass="EndGameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1uD-1k-9sW"/>
+                        <viewControllerLayoutGuide type="bottom" id="4zj-u8-z0o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6by-cO-1s1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="jux-wc-xkL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FD-TM-A6A">
+                                <rect key="frame" x="68" y="368" width="238" height="40"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="UYO-xs-kmS"/>
+                                </constraints>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpp-jg-6lo">
+                                <rect key="frame" x="68" y="436" width="238" height="40"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="GlN-aG-ARI"/>
+                                </constraints>
+                                <state key="normal" title="Main Menu">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbF-vw-t4H">
+                                <rect key="frame" x="20" y="267" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6d-xj-JvB">
+                                <rect key="frame" x="20" y="200" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="X6d-xj-JvB" firstAttribute="top" secondItem="1uD-1k-9sW" secondAttribute="bottom" constant="180" id="0uC-Qy-DXh"/>
+                            <constraint firstAttribute="trailing" secondItem="jbF-vw-t4H" secondAttribute="trailing" constant="20" id="4Kf-Hi-HEp"/>
+                            <constraint firstItem="hpp-jg-6lo" firstAttribute="leading" secondItem="6by-cO-1s1" secondAttribute="leading" constant="68" id="GFe-oY-nIc"/>
+                            <constraint firstItem="hpp-jg-6lo" firstAttribute="top" secondItem="6FD-TM-A6A" secondAttribute="bottom" constant="28" id="Iet-Py-qcD"/>
+                            <constraint firstItem="jux-wc-xkL" firstAttribute="top" secondItem="6by-cO-1s1" secondAttribute="top" id="RUe-db-zAP"/>
+                            <constraint firstItem="6FD-TM-A6A" firstAttribute="top" secondItem="jbF-vw-t4H" secondAttribute="bottom" constant="80" id="WOJ-Vt-eLC"/>
+                            <constraint firstAttribute="trailing" secondItem="6FD-TM-A6A" secondAttribute="trailing" constant="69" id="c31-Ue-6jG"/>
+                            <constraint firstItem="4zj-u8-z0o" firstAttribute="top" secondItem="jux-wc-xkL" secondAttribute="bottom" id="cM0-wv-VFg"/>
+                            <constraint firstItem="jbF-vw-t4H" firstAttribute="top" secondItem="X6d-xj-JvB" secondAttribute="bottom" constant="46" id="dH0-Nd-pU5"/>
+                            <constraint firstItem="jbF-vw-t4H" firstAttribute="leading" secondItem="6by-cO-1s1" secondAttribute="leading" constant="20" id="f1L-ZL-DHl"/>
+                            <constraint firstAttribute="trailing" secondItem="jux-wc-xkL" secondAttribute="trailing" id="gIx-XK-Cjl"/>
+                            <constraint firstItem="6FD-TM-A6A" firstAttribute="leading" secondItem="6by-cO-1s1" secondAttribute="leading" constant="68" id="gPZ-PL-Wea"/>
+                            <constraint firstAttribute="trailing" secondItem="X6d-xj-JvB" secondAttribute="trailing" constant="20" id="iEi-PR-ZSt"/>
+                            <constraint firstAttribute="trailing" secondItem="hpp-jg-6lo" secondAttribute="trailing" constant="69" id="mvt-rS-HHm"/>
+                            <constraint firstItem="X6d-xj-JvB" firstAttribute="leading" secondItem="6by-cO-1s1" secondAttribute="leading" constant="20" id="nQK-y3-sy0"/>
+                            <constraint firstItem="jux-wc-xkL" firstAttribute="leading" secondItem="6by-cO-1s1" secondAttribute="leading" id="nTR-yv-E0K"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ButtonMainMenu" destination="hpp-jg-6lo" id="6wY-pn-h56"/>
+                        <outlet property="ButtonPlayAgain" destination="6FD-TM-A6A" id="qO7-u7-Qfc"/>
+                        <outlet property="LabelEndGamePoints" destination="X6d-xj-JvB" id="VoK-Xd-WvQ"/>
+                        <outlet property="LabelWinnerText" destination="jbF-vw-t4H" id="ZTF-y2-KeD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Eu-bG-LFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47.200000000000003" y="51.724137931034484"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background.jpg" width="320" height="480"/>
+    </resources>
+</document>

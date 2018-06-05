@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="E3L-bQ-KzF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="hwg-Tv-mKf">
+            <objects>
+                <viewController storyboardIdentifier="GameViewController" id="E3L-bQ-KzF" customClass="GameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="blG-Np-6Tz"/>
+                        <viewControllerLayoutGuide type="bottom" id="yEy-SN-Dam"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EoD-0M-YI6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rDk-mB-9aJ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RcM-j1-eUz">
+                                <rect key="frame" x="10" y="586" width="162" height="50"/>
+                                <color key="backgroundColor" red="0.96078431372549022" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sh9-Ht-m4b"/>
+                                </constraints>
+                                <state key="normal" title="Stick">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dealers hand total: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLf-wE-EQ8">
+                                <rect key="frame" x="16" y="122" width="343" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kCt-hk-hMF" userLabel="ViewScores">
+                                <rect key="frame" x="0.0" y="20" width="375" height="40.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3V-CZ-KN8" userLabel="LabelPlayerScore">
+                                        <rect key="frame" x="10" y="10" width="121.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dealers score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWg-42-G4j" userLabel="LabelDealerScore">
+                                        <rect key="frame" x="240.5" y="10" width="124.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="c3V-CZ-KN8" firstAttribute="top" secondItem="kCt-hk-hMF" secondAttribute="top" constant="10" id="FfC-BX-ReE"/>
+                                    <constraint firstItem="xWg-42-G4j" firstAttribute="top" secondItem="kCt-hk-hMF" secondAttribute="top" constant="10" id="H1T-is-cDN"/>
+                                    <constraint firstAttribute="bottom" secondItem="c3V-CZ-KN8" secondAttribute="bottom" constant="10" id="IQ1-Ie-WMw"/>
+                                    <constraint firstItem="c3V-CZ-KN8" firstAttribute="leading" secondItem="kCt-hk-hMF" secondAttribute="leading" constant="10" id="QMI-Dr-lwC"/>
+                                    <constraint firstAttribute="trailing" secondItem="xWg-42-G4j" secondAttribute="trailing" constant="10" id="XRe-Oq-ws8"/>
+                                    <constraint firstAttribute="bottom" secondItem="xWg-42-G4j" secondAttribute="bottom" constant="10" id="owV-HS-bTZ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qB-dN-VGW">
+                                <rect key="frame" x="203" y="586" width="162" height="50"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bmL-V7-cx4"/>
+                                </constraints>
+                                <state key="normal" title="Hit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players hand total: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysD-iv-CXX">
+                                <rect key="frame" x="16" y="362" width="343" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="98X-FJ-0zx">
+                                <rect key="frame" x="16" y="165" width="343" height="81"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yVU-I9-fbw" userLabel="DealerFirstCard">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="81"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="81" id="WWv-cP-6nb"/>
+                                            <constraint firstAttribute="width" constant="51" id="cTr-fg-zjt"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbp-EV-jXH" userLabel="DealerSecondCard">
+                                        <rect key="frame" x="74" y="0.0" width="50" height="81"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="kGe-Nt-5kn"/>
+                                            <constraint firstAttribute="height" constant="81" id="rWY-EX-EPl"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Pg-ff-RgU" userLabel="DealerThirdCard">
+                                        <rect key="frame" x="147" y="0.0" width="50" height="81"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="81" id="MH8-Rm-Hud"/>
+                                            <constraint firstAttribute="width" constant="50" id="Zqv-ZV-55P"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCz-VY-1cJ" userLabel="DealerFourthCard">
+                                        <rect key="frame" x="220" y="0.0" width="50" height="81"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="i6D-lZ-3ot"/>
+                                            <constraint firstAttribute="height" constant="81" id="ihL-Yi-BMf"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="huq-Yy-NW1" userLabel="DealerFifthCard">
+                                        <rect key="frame" x="293" y="0.0" width="50" height="81"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="81" id="4LO-UE-d45"/>
+                                            <constraint firstAttribute="width" constant="50" id="FDu-zx-r6F"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="CSU-NX-T9k">
+                                <rect key="frame" x="16" y="407.5" width="343" height="81"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UiZ-DZ-KoL" userLabel="PlayerFirstCard">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="81"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="81" id="JAF-Fb-JNj"/>
+                                            <constraint firstAttribute="width" constant="51" id="L2E-u9-gUa"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7aA-Fv-If1" userLabel="PlayerSecondCard">
+                                        <rect key="frame" x="74" y="0.0" width="50" height="81"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="nv6-cN-BHI"/>
+                                            <constraint firstAttribute="height" constant="81" id="tDs-Z2-tp3"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qah-vE-kQ1" userLabel="PlayerThirdCard">
+                                        <rect key="frame" x="147" y="0.0" width="50" height="81"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Jgc-iB-esU"/>
+                                            <constraint firstAttribute="height" constant="81" id="j61-ba-MUI"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QhW-We-7Py" userLabel="PlayerFourthCard">
+                                        <rect key="frame" x="220" y="0.0" width="50" height="81"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="82L-lL-YMN"/>
+                                            <constraint firstAttribute="height" constant="81" id="uLN-k7-PTf"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdE-5I-8jm" userLabel="PlayerFifthCard">
+                                        <rect key="frame" x="293" y="0.0" width="50" height="81"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="81" id="NP0-oG-ElA"/>
+                                            <constraint firstAttribute="width" constant="50" id="pYI-DR-KKb"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Convo Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CU9-sq-1ya">
+                                <rect key="frame" x="16" y="296" width="343" height="31.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31.5" id="OLz-CG-Nlo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rDk-mB-9aJ" firstAttribute="top" secondItem="blG-Np-6Tz" secondAttribute="bottom" id="2Rc-pA-IbX"/>
+                            <constraint firstItem="RcM-j1-eUz" firstAttribute="leading" secondItem="EoD-0M-YI6" secondAttribute="leading" constant="10" id="2SO-5y-co4"/>
+                            <constraint firstItem="yEy-SN-Dam" firstAttribute="top" secondItem="7qB-dN-VGW" secondAttribute="bottom" constant="31" id="4DB-ly-CqA"/>
+                            <constraint firstItem="jLf-wE-EQ8" firstAttribute="leading" secondItem="EoD-0M-YI6" secondAttribute="leading" constant="16" id="4h5-oj-Org"/>
+                            <constraint firstAttribute="trailing" secondItem="CSU-NX-T9k" secondAttribute="trailing" constant="16" id="5SR-pF-Mk6"/>
+                            <constraint firstAttribute="trailing" secondItem="jLf-wE-EQ8" secondAttribute="trailing" constant="16" id="7WX-ab-SNe"/>
+                            <constraint firstAttribute="trailing" secondItem="7qB-dN-VGW" secondAttribute="trailing" constant="10" id="8lw-Ew-Z26"/>
+                            <constraint firstAttribute="trailing" secondItem="ysD-iv-CXX" secondAttribute="trailing" constant="16" id="96A-c7-VR5"/>
+                            <constraint firstItem="yEy-SN-Dam" firstAttribute="top" secondItem="RcM-j1-eUz" secondAttribute="bottom" constant="31" id="9AR-fS-XDw"/>
+                            <constraint firstItem="ysD-iv-CXX" firstAttribute="leading" secondItem="EoD-0M-YI6" secondAttribute="leading" constant="16" id="Aui-lk-Eui"/>
+                            <constraint firstItem="CSU-NX-T9k" firstAttribute="top" secondItem="ysD-iv-CXX" secondAttribute="bottom" constant="25.5" id="EpZ-nl-V1c"/>
+                            <constraint firstItem="98X-FJ-0zx" firstAttribute="top" secondItem="jLf-wE-EQ8" secondAttribute="bottom" constant="23.5" id="GhN-qR-kOA"/>
+                            <constraint firstItem="RcM-j1-eUz" firstAttribute="top" secondItem="CSU-NX-T9k" secondAttribute="bottom" multiplier="1.2" id="IMI-sV-Oyh"/>
+                            <constraint firstAttribute="trailing" secondItem="rDk-mB-9aJ" secondAttribute="trailing" id="K8T-bt-iSL"/>
+                            <constraint firstItem="yEy-SN-Dam" firstAttribute="top" secondItem="rDk-mB-9aJ" secondAttribute="bottom" id="K8l-fL-MlL"/>
+                            <constraint firstItem="rDk-mB-9aJ" firstAttribute="leading" secondItem="EoD-0M-YI6" secondAttribute="leading" id="QHa-xs-ad0"/>
+                            <constraint firstItem="kCt-hk-hMF" firstAttribute="leading" secondItem="EoD-0M-YI6" secondAttribute="leading" id="R9K-1f-dPi"/>
+                            <constraint firstAttribute="trailing" secondItem="kCt-hk-hMF" secondAttribute="trailing" id="aL3-K1-UrM"/>
+                            <constraint firstItem="7qB-dN-VGW" firstAttribute="leading" secondItem="RcM-j1-eUz" secondAttribute="trailing" constant="31" id="d8C-hG-Gp5"/>
+                            <constraint firstItem="CU9-sq-1ya" firstAttribute="top" secondItem="98X-FJ-0zx" secondAttribute="bottom" constant="50" id="f63-F4-e38"/>
+                            <constraint firstAttribute="trailing" secondItem="CU9-sq-1ya" secondAttribute="trailing" constant="16" id="fIV-Ey-S8l"/>
+                            <constraint firstItem="7qB-dN-VGW" firstAttribute="width" secondItem="RcM-j1-eUz" secondAttribute="width" id="kvc-41-m4s"/>
+                            <constraint firstItem="CU9-sq-1ya" firstAttribute="leading" secondItem="EoD-0M-YI6" secondAttribute="leading" constant="16" id="pHH-uO-N9x"/>
+                            <constraint firstAttribute="trailing" secondItem="98X-FJ-0zx" secondAttribute="trailing" constant="16" id="pNS-Wc-VdG"/>
+                            <constraint firstItem="kCt-hk-hMF" firstAttribute="top" secondItem="blG-Np-6Tz" secondAttribute="bottom" id="vtW-Sk-Dvd"/>
+                            <constraint firstItem="ysD-iv-CXX" firstAttribute="top" secondItem="CU9-sq-1ya" secondAttribute="bottom" constant="34.5" id="zRh-ea-USQ"/>
+                            <constraint firstItem="CSU-NX-T9k" firstAttribute="leading" secondItem="EoD-0M-YI6" secondAttribute="leading" constant="16" id="zeR-bN-KKb"/>
+                            <constraint firstItem="98X-FJ-0zx" firstAttribute="leading" secondItem="EoD-0M-YI6" secondAttribute="leading" constant="16" id="zoU-Ur-CCq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ButtonHit" destination="7qB-dN-VGW" id="rvA-yr-2Uy"/>
+                        <outlet property="ButtonStick" destination="RcM-j1-eUz" id="Jat-W9-OLx"/>
+                        <outlet property="DealerFifthCard" destination="huq-Yy-NW1" id="dEB-0O-Og4"/>
+                        <outlet property="DealerFirstCard" destination="yVU-I9-fbw" id="YHd-WU-rpG"/>
+                        <outlet property="DealerFourthCard" destination="fCz-VY-1cJ" id="59S-rs-ORh"/>
+                        <outlet property="DealerSecondCard" destination="cbp-EV-jXH" id="KpD-aO-idp"/>
+                        <outlet property="DealerThirdCard" destination="6Pg-ff-RgU" id="3xu-He-5Qx"/>
+                        <outlet property="LabelConvoText" destination="CU9-sq-1ya" id="0MA-ue-cYe"/>
+                        <outlet property="LabelDealerScore" destination="xWg-42-G4j" id="GhY-Ku-QBP"/>
+                        <outlet property="LabelDealersHandTotal" destination="jLf-wE-EQ8" id="M1l-Gc-Ws6"/>
+                        <outlet property="LabelPlayerScore" destination="c3V-CZ-KN8" id="JZE-7N-2tQ"/>
+                        <outlet property="LabelPlayersHandTotal" destination="ysD-iv-CXX" id="KPg-pT-RgM"/>
+                        <outlet property="PlayerFifthCard" destination="cdE-5I-8jm" id="tlQ-ZT-PGI"/>
+                        <outlet property="PlayerFirstCard" destination="UiZ-DZ-KoL" id="onW-1n-gYm"/>
+                        <outlet property="PlayerFourthCard" destination="QhW-We-7Py" id="iFP-ql-0bK"/>
+                        <outlet property="PlayerSecondCard" destination="7aA-Fv-If1" id="Ueo-ii-4Eg"/>
+                        <outlet property="PlayerThirdCard" destination="Qah-vE-kQ1" id="C7y-GE-Nmr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DHO-Xh-voU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1463.2" y="93.103448275862078"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background.jpg" width="320" height="480"/>
+    </resources>
+</document>

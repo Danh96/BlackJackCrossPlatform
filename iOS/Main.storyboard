@@ -1,40 +1,93 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zix-8t-JpM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735" />
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="l4Q-lZ-Wk1">
+            <objects>
+                <navigationController id="zix-8t-JpM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lYm-Ja-DZz">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yUa-IY-Uzm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8kN-ix-Z2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-914" y="0.0"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ" />
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE" />
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600" />
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" />
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBE-Ac-vcx">
-                                <rect key="frame" x="224" y="285" width="152" height="30" />
-                                <state key="normal" title="Hello World, Click Me!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite" />
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5kJ-52-gbu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kH-xM-stx">
+                                <rect key="frame" x="84" y="464" width="206" height="40"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7Se-N9-snY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="Start Game">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="EBc-0Q-ET5">
+                                <rect key="frame" x="49" y="254" width="277" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EBc-0Q-ET5" secondAttribute="height" multiplier="277:160" id="Ovo-gX-axQ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite" />
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="oBE-Ac-vcx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HiD-uS-i16" />
-                            <constraint firstItem="oBE-Ac-vcx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YgX-7e-bMc" />
+                            <constraint firstItem="5kJ-52-gbu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0K9-nJ-tas"/>
+                            <constraint firstItem="0kH-xM-stx" firstAttribute="top" secondItem="EBc-0Q-ET5" secondAttribute="bottom" constant="50" id="4uF-Kj-M2P"/>
+                            <constraint firstItem="5kJ-52-gbu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4yu-ba-U0G"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5kJ-52-gbu" secondAttribute="bottom" id="IQJ-iq-yAU"/>
+                            <constraint firstItem="EBc-0Q-ET5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="33" id="VBv-Ql-JoJ"/>
+                            <constraint firstItem="0kH-xM-stx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="68" id="hdq-rQ-3Xp"/>
+                            <constraint firstAttribute="trailing" secondItem="5kJ-52-gbu" secondAttribute="trailing" id="lLf-hU-21l"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0kH-xM-stx" secondAttribute="trailing" constant="69" id="lYf-r9-Hh1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EBc-0Q-ET5" secondAttribute="trailing" constant="33" id="pOu-1a-J25"/>
+                            <constraint firstItem="EBc-0Q-ET5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="190" id="z3w-X7-jI3"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hKx-2B-yOk">
+                        <barButtonItem key="backBarButtonItem" title=" " id="p6a-cR-dxw"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="Button" destination="oBE-Ac-vcx" id="OkX-0Z-gth" />
+                        <outlet property="ButtonStartGame" destination="0kH-xM-stx" id="name-outlet-0kH-xM-stx"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder" />
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-0.80000000000000004" y="-0.44977509999999998"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background.jpg" width="320" height="480"/>
+        <image name="Logo.png" width="356" height="226"/>
+    </resources>
 </document>

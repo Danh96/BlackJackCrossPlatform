@@ -8,19 +8,20 @@ using Foundation;
 using System;
 using System.CodeDom.Compiler;
 
-namespace BlackJack.iOS
+namespace BlackJackIOS
 {
     [Register ("ViewController")]
     partial class ViewController
     {
         [Outlet]
-        UIKit.UIButton Button { get; set; }
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton ButtonStartGame { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (Button != null) {
-                Button.Dispose ();
-                Button = null;
+            if (ButtonStartGame != null) {
+                ButtonStartGame.Dispose ();
+                ButtonStartGame = null;
             }
         }
     }
