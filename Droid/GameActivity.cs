@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
@@ -20,6 +19,8 @@ namespace BlackJack
 	public class GameActivity : Activity
 	{
         private GameFunctions gameFunctions = new GameFunctions();
+
+        private CancellationTokenSource CancellationToken = new CancellationTokenSource();
 
 		private MediaPlayer _player = new MediaPlayer();
 
@@ -45,7 +46,7 @@ namespace BlackJack
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
-			base.OnCreate(savedInstanceState);
+            base.OnCreate(savedInstanceState);
 
             gameFunctions.PropertyChanged += GameFunctions_PropertyChanged;
             
@@ -75,27 +76,31 @@ namespace BlackJack
             buttonHit.Click += HitButton_Click;
 
             SetCardsToInvisible();
-            SelectMatchPointsDialogPopUp();
 		}
 
 		private async void HitButton_Click(object sender, EventArgs e)
 		{
-            await gameFunctions.PlayerHit();
+            await gameFunctions.PlayerHit(CancellationToken.Token);
         }
 
 		private async void StickButton_Click(object sender, EventArgs e)
 		{
-            await gameFunctions.PlayerStick();
+            await gameFunctions.PlayerStick(CancellationToken.Token);
 		}
 
 		protected override void OnPause()
 		{
 			base.OnPause();
+            CancellationToken.Cancel();
 		}
 
 		protected override void OnResume()
 		{
 			base.OnResume();
+            CancellationToken = new CancellationTokenSource();
+            SetCardsToInvisible();
+            gameFunctions.ResetGame();
+            SelectMatchPointsDialogPopUp();
 		}
 
         void GameFunctions_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -127,7 +132,19 @@ namespace BlackJack
             }
             else if (string.Equals(nameof(gameFunctions.GameContinues), e.PropertyName))
             {
-                //TODO implement end game screen navigation here!
+                if(gameFunctions.GameContinues == false)
+                {
+                    Intent intent = new Intent(this, typeof(EndGameActivity));
+                    intent.PutExtra("playerGameScore", gameFunctions.PlayerGameScore);
+                    intent.PutExtra("dealerGameScore", gameFunctions.DealerGameScore);
+                    StartActivity(intent);
+                    Finish();
+                }
+                else 
+                {
+                    StartShufflePlayer();
+                    SetNewHand();
+                }
             }
             else if (string.Equals(nameof(gameFunctions.PlayersHand), e.PropertyName))
             {
@@ -282,19 +299,28 @@ namespace BlackJack
         private void SetMatchPointsToTen(object sender, DialogClickEventArgs e)
         {
             gameFunctions.SetMaxMatchPoint(10);
-            //StartShufflePlayer();
+            SetNewHand();
+            StartShufflePlayer();
         }
 
         private void SetMatchPointsToFive(object sender, DialogClickEventArgs e)
         {
             gameFunctions.SetMaxMatchPoint(5);
-            //StartShufflePlayer();
+            SetNewHand();
+            StartShufflePlayer();
         }
 
         private void SetMatchPointsToThree(object sender, DialogClickEventArgs e)
         {
             gameFunctions.SetMaxMatchPoint(3);
-            //StartShufflePlayer();
+            SetNewHand();
+            StartShufflePlayer();
+        }
+
+        private void StartShufflePlayer()
+        {
+            _player = MediaPlayer.Create(this, Resource.Raw.ShuffleSound);
+            _player.Start();
         }
 	}
 }

@@ -4,8 +4,9 @@
   </MonoDevelop.Ide.ItemProperties.BlackJack.iOS>
   <MonoDevelop.Ide.Workbench ActiveDocument="BlackJack/GameFunctions.cs">
     <Files>
-      <File FileName="Droid/GameActivity.cs" Line="79" Column="4" />
-      <File FileName="BlackJack/GameFunctions.cs" Line="113" Column="89" />
+      <File FileName="Droid/GameActivity.cs" Line="47" Column="13" />
+      <File FileName="BlackJack/GameFunctions.cs" Line="16" Column="52" />
+      <File FileName="Droid/CardView.cs" Line="65" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

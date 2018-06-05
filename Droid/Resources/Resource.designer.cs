@@ -96,95 +96,95 @@ namespace BlackJack.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f070003
-			public const int BottomRightChar = 2131165187;
+			// aapt resource value: 0x7f080003
+			public const int BottomRightChar = 2131230723;
 			
-			// aapt resource value: 0x7f07001d
-			public const int ButtonGame = 2131165213;
+			// aapt resource value: 0x7f08001d
+			public const int ButtonGame = 2131230749;
 			
-			// aapt resource value: 0x7f07001c
-			public const int ButtonHit = 2131165212;
+			// aapt resource value: 0x7f08001c
+			public const int ButtonHit = 2131230748;
 			
-			// aapt resource value: 0x7f070007
-			public const int ButtonHome = 2131165191;
+			// aapt resource value: 0x7f080007
+			public const int ButtonHome = 2131230727;
 			
-			// aapt resource value: 0x7f07001b
-			public const int ButtonStick = 2131165211;
+			// aapt resource value: 0x7f08001b
+			public const int ButtonStick = 2131230747;
 			
-			// aapt resource value: 0x7f070012
-			public const int ConvoText = 2131165202;
+			// aapt resource value: 0x7f080012
+			public const int ConvoText = 2131230738;
 			
-			// aapt resource value: 0x7f07000a
-			public const int DealerGameScore = 2131165194;
+			// aapt resource value: 0x7f08000a
+			public const int DealerGameScore = 2131230730;
 			
-			// aapt resource value: 0x7f070011
-			public const int DealersFifthCard = 2131165201;
+			// aapt resource value: 0x7f080011
+			public const int DealersFifthCard = 2131230737;
 			
-			// aapt resource value: 0x7f07000d
-			public const int DealersFirstCard = 2131165197;
+			// aapt resource value: 0x7f08000d
+			public const int DealersFirstCard = 2131230733;
 			
-			// aapt resource value: 0x7f070010
-			public const int DealersFourthCard = 2131165200;
+			// aapt resource value: 0x7f080010
+			public const int DealersFourthCard = 2131230736;
 			
-			// aapt resource value: 0x7f07000c
-			public const int DealersHand = 2131165196;
+			// aapt resource value: 0x7f08000c
+			public const int DealersHand = 2131230732;
 			
-			// aapt resource value: 0x7f07000b
-			public const int DealersHandText = 2131165195;
+			// aapt resource value: 0x7f08000b
+			public const int DealersHandText = 2131230731;
 			
-			// aapt resource value: 0x7f07000e
-			public const int DealersSecondCard = 2131165198;
+			// aapt resource value: 0x7f08000e
+			public const int DealersSecondCard = 2131230734;
 			
-			// aapt resource value: 0x7f07000f
-			public const int DealersThirdCard = 2131165199;
+			// aapt resource value: 0x7f08000f
+			public const int DealersThirdCard = 2131230735;
 			
-			// aapt resource value: 0x7f070000
-			public const int LayoutCard = 2131165184;
+			// aapt resource value: 0x7f080000
+			public const int LayoutCard = 2131230720;
 			
-			// aapt resource value: 0x7f070006
-			public const int PlayAgain = 2131165190;
+			// aapt resource value: 0x7f080006
+			public const int PlayAgain = 2131230726;
 			
-			// aapt resource value: 0x7f070009
-			public const int PlayerGameScore = 2131165193;
+			// aapt resource value: 0x7f080009
+			public const int PlayerGameScore = 2131230729;
 			
-			// aapt resource value: 0x7f070019
-			public const int PlayersFifthCard = 2131165209;
+			// aapt resource value: 0x7f080019
+			public const int PlayersFifthCard = 2131230745;
 			
-			// aapt resource value: 0x7f070015
-			public const int PlayersFirstCard = 2131165205;
+			// aapt resource value: 0x7f080015
+			public const int PlayersFirstCard = 2131230741;
 			
-			// aapt resource value: 0x7f070018
-			public const int PlayersFourthCard = 2131165208;
+			// aapt resource value: 0x7f080018
+			public const int PlayersFourthCard = 2131230744;
 			
-			// aapt resource value: 0x7f070014
-			public const int PlayersHand = 2131165204;
+			// aapt resource value: 0x7f080014
+			public const int PlayersHand = 2131230740;
 			
-			// aapt resource value: 0x7f070013
-			public const int PlayersHandText = 2131165203;
+			// aapt resource value: 0x7f080013
+			public const int PlayersHandText = 2131230739;
 			
-			// aapt resource value: 0x7f070016
-			public const int PlayersSecondCard = 2131165206;
+			// aapt resource value: 0x7f080016
+			public const int PlayersSecondCard = 2131230742;
 			
-			// aapt resource value: 0x7f070017
-			public const int PlayersThirdCard = 2131165207;
+			// aapt resource value: 0x7f080017
+			public const int PlayersThirdCard = 2131230743;
 			
-			// aapt resource value: 0x7f070008
-			public const int ScoreBar = 2131165192;
+			// aapt resource value: 0x7f080008
+			public const int ScoreBar = 2131230728;
 			
-			// aapt resource value: 0x7f070002
-			public const int SuitImage = 2131165186;
+			// aapt resource value: 0x7f080002
+			public const int SuitImage = 2131230722;
 			
-			// aapt resource value: 0x7f070004
-			public const int TextGamePoints = 2131165188;
+			// aapt resource value: 0x7f080004
+			public const int TextGamePoints = 2131230724;
 			
-			// aapt resource value: 0x7f070001
-			public const int TopLeftChar = 2131165185;
+			// aapt resource value: 0x7f080001
+			public const int TopLeftChar = 2131230721;
 			
-			// aapt resource value: 0x7f070005
-			public const int WinnerText = 2131165189;
+			// aapt resource value: 0x7f080005
+			public const int WinnerText = 2131230725;
 			
-			// aapt resource value: 0x7f07001a
-			public const int bottom_panel = 2131165210;
+			// aapt resource value: 0x7f08001a
+			public const int bottom_panel = 2131230746;
 			
 			static Id()
 			{
@@ -237,14 +237,30 @@ namespace BlackJack.Droid
 			}
 		}
 		
+		public partial class Raw
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int ShuffleSound = 2131034112;
+			
+			static Raw()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Raw()
+			{
+			}
+		}
+		
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f050001
-			public const int app_name = 2131034113;
+			// aapt resource value: 0x7f060001
+			public const int app_name = 2131099649;
 			
-			// aapt resource value: 0x7f050000
-			public const int hello = 2131034112;
+			// aapt resource value: 0x7f060000
+			public const int hello = 2131099648;
 			
 			static String()
 			{
@@ -259,14 +275,14 @@ namespace BlackJack.Droid
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f060001
-			public const int MyTheme = 2131099649;
+			// aapt resource value: 0x7f070001
+			public const int MyTheme = 2131165185;
 			
-			// aapt resource value: 0x7f060000
-			public const int MyTheme_Base = 2131099648;
+			// aapt resource value: 0x7f070000
+			public const int MyTheme_Base = 2131165184;
 			
-			// aapt resource value: 0x7f060002
-			public const int MyTheme_Splash = 2131099650;
+			// aapt resource value: 0x7f070002
+			public const int MyTheme_Splash = 2131165186;
 			
 			static Style()
 			{
