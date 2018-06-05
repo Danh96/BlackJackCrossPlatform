@@ -1,12 +1,11 @@
 ﻿<Properties StartupConfiguration="{0A453088-143D-4C99-AD37-DD61BA38306A}|Default">
-  <MonoDevelop.Ide.ItemProperties.BlackJack.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6DDEA7E9-D934-4925-BB38-5F852F44AFC3">
-    <MonoDevelop.MacDev.AppleDevelopmentTeam />
-  </MonoDevelop.Ide.ItemProperties.BlackJack.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="BlackJack/GameFunctions.cs">
+  <MonoDevelop.Ide.ItemProperties.BlackJack.iOS automaticSigning="False" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/LaunchScreen.storyboard">
     <Files>
-      <File FileName="Droid/GameActivity.cs" Line="47" Column="13" />
-      <File FileName="BlackJack/GameFunctions.cs" Line="16" Column="52" />
-      <File FileName="Droid/CardView.cs" Line="65" Column="10" />
+      <File FileName="Droid/GameActivity.cs" Line="326" Column="2" />
+      <File FileName="BlackJack/GameFunctions.cs" Line="1" Column="1" />
+      <File FileName="iOS/Info.plist" />
+      <File FileName="iOS/LaunchScreen.storyboard" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -15,5 +14,5 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.BlackJack.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Nexus_5X_API_25" />
+  <MonoDevelop.Ide.ItemProperties.BlackJack.Droid PreferredExecutionTarget="Android.Nexus_5X_API_25" />
 </Properties>

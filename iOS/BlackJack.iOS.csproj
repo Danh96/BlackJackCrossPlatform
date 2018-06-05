@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
@@ -94,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Resources\Sounds\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -110,6 +110,20 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Sounds\ShuffleSound.mp3" />
+    <BundleResource Include="Resources\AppLogo.png" />
+    <BundleResource Include="Resources\AppLogo120.png" />
+    <BundleResource Include="Resources\AppLogo180.png" />
+    <BundleResource Include="Resources\Background.jpg" />
+    <BundleResource Include="Resources\CardBack.png" />
+    <BundleResource Include="Resources\Clubs.png" />
+    <BundleResource Include="Resources\Diamonds.png" />
+    <BundleResource Include="Resources\game_bj_mh5_Tile%402x_594x320_1.png" />
+    <BundleResource Include="Resources\Hearts.png" />
+    <BundleResource Include="Resources\Logo.png" />
+    <BundleResource Include="Resources\Spades.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
