@@ -107,7 +107,6 @@ namespace BlackJack.iOS
                 else
                 {
                     StartShufflePlayer();
-                    SetNewHand();
                 }
             }
             else if (string.Equals(nameof(gameFunctions.PlayersHand), e.PropertyName))
@@ -258,18 +257,25 @@ namespace BlackJack.iOS
 
             actionSheetAlert.View.TintColor = UIColor.FromRGB(245, 0, 0);
 
-            actionSheetAlert.AddAction(UIAlertAction.Create("3", UIAlertActionStyle.Default, (action) => gameFunctions.SetMaxMatchPoint(3)));
+            actionSheetAlert.AddAction(UIAlertAction.Create("3", UIAlertActionStyle.Default, (action) => SetMatchPoints(3)));
 
-            actionSheetAlert.AddAction(UIAlertAction.Create("5", UIAlertActionStyle.Default, (action) => gameFunctions.SetMaxMatchPoint(5)));
+            actionSheetAlert.AddAction(UIAlertAction.Create("5", UIAlertActionStyle.Default, (action) => SetMatchPoints(5)));
 
-            actionSheetAlert.AddAction(UIAlertAction.Create("10", UIAlertActionStyle.Default, (action) => gameFunctions.SetMaxMatchPoint(10)));
+            actionSheetAlert.AddAction(UIAlertAction.Create("10", UIAlertActionStyle.Default, (action) => SetMatchPoints(10)));
 
             this.PresentViewController(actionSheetAlert, true, null);
+        }
+
+        private void SetMatchPoints(int points)
+        {
+            gameFunctions.SetMaxMatchPoint(points);
+            StartShufflePlayer();
         }
 
         private void StartShufflePlayer()
         {
             shuffleSound.PlayAlertSound();
+            SetNewHand();
         }
     }
 }
