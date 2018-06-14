@@ -115,10 +115,12 @@
     </Compile>
     <Compile Include="EndGameViewController.cs" />
     <Compile Include="EndGameViewController.designer.cs" />
-    <Compile Include="GameViewController.cs" />
-    <Compile Include="GameViewController.designer.cs" />
     <Compile Include="PlayingCard.cs" />
     <Compile Include="PlayingCard.designer.cs" />
+    <Compile Include="GameViewController.cs" />
+    <Compile Include="GameViewController.designer.cs">
+      <DependentUpon>GameViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Sounds\ShuffleSound.mp3" />
