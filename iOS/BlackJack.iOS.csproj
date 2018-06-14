@@ -109,10 +109,6 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="EndGameViewController.cs" />
-    <Compile Include="EndGameViewController.designer.cs" />
-    <Compile Include="PlayingCard.cs" />
-    <Compile Include="PlayingCard.designer.cs" />
     <Compile Include="GameViewController.cs" />
     <Compile Include="GameViewController.designer.cs">
       <DependentUpon>GameViewController.cs</DependentUpon>
@@ -120,6 +116,10 @@
     <Compile Include="MainViewController.cs" />
     <Compile Include="MainViewController.designer.cs">
       <DependentUpon>MainViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EndGameViewController.cs" />
+    <Compile Include="EndGameViewController.designer.cs">
+      <DependentUpon>EndGameViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

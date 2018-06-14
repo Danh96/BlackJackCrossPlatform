@@ -1,10 +1,8 @@
 ﻿<Properties StartupConfiguration="{1C3F804E-967D-4311-A748-C5E40046649C}|Default">
   <MonoDevelop.Ide.ItemProperties.BlackJack.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.81EDF27E-E426-41EA-89E6-7450110CADB9" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/MainViewController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/GameViewController.cs">
     <Files>
-      <File FileName="iOS/GameViewController.cs" Line="216" Column="10" />
-      <File FileName="iOS/PlayingCard.cs" Line="33" Column="22" />
-      <File FileName="iOS/MainViewController.cs" Line="22" Column="32" />
+      <File FileName="iOS/GameViewController.cs" Line="101" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
