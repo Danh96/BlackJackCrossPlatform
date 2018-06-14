@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using AudioToolbox;
@@ -15,6 +16,10 @@ namespace BlackJack.iOS
         private CancellationTokenSource CancellationToken = new CancellationTokenSource();
 
         private SystemSound shuffleSound = new SystemSound(NSUrl.FromFilename("Sounds/ShuffleSound.mp3"));
+
+        public GameViewController(IntPtr handle) : base(handle)
+        {
+        }
 
         public override void ViewDidDisappear(bool animated)
         {

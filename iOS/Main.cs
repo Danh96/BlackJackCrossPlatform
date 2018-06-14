@@ -1,6 +1,6 @@
 ﻿using UIKit;
 
-namespace BlackJackIOS
+namespace BlackJack.iOS
 {
     public class Application
     {
