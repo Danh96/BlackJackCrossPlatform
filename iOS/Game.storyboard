@@ -216,23 +216,23 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ButtonHit" destination="7qB-dN-VGW" id="s9B-pN-p0F"/>
-                        <outlet property="ButtonStick" destination="RcM-j1-eUz" id="4ri-cM-Wgs"/>
-                        <outlet property="DealerFifthCard" destination="huq-Yy-NW1" id="dEB-0O-Og4"/>
-                        <outlet property="DealerFirstCard" destination="yVU-I9-fbw" id="YHd-WU-rpG"/>
-                        <outlet property="DealerFourthCard" destination="fCz-VY-1cJ" id="59S-rs-ORh"/>
-                        <outlet property="DealerSecondCard" destination="cbp-EV-jXH" id="KpD-aO-idp"/>
-                        <outlet property="DealerThirdCard" destination="6Pg-ff-RgU" id="3xu-He-5Qx"/>
-                        <outlet property="LabelConvoText" destination="CU9-sq-1ya" id="0MA-ue-cYe"/>
-                        <outlet property="LabelDealerScore" destination="xWg-42-G4j" id="GhY-Ku-QBP"/>
-                        <outlet property="LabelDealersHandTotal" destination="jLf-wE-EQ8" id="M1l-Gc-Ws6"/>
-                        <outlet property="LabelPlayerScore" destination="c3V-CZ-KN8" id="JZE-7N-2tQ"/>
-                        <outlet property="LabelPlayersHandTotal" destination="ysD-iv-CXX" id="KPg-pT-RgM"/>
-                        <outlet property="PlayerFifthCard" destination="cdE-5I-8jm" id="tlQ-ZT-PGI"/>
-                        <outlet property="PlayerFirstCard" destination="UiZ-DZ-KoL" id="onW-1n-gYm"/>
-                        <outlet property="PlayerFourthCard" destination="QhW-We-7Py" id="iFP-ql-0bK"/>
-                        <outlet property="PlayerSecondCard" destination="7aA-Fv-If1" id="Ueo-ii-4Eg"/>
-                        <outlet property="PlayerThirdCard" destination="Qah-vE-kQ1" id="C7y-GE-Nmr"/>
+                        <outlet property="ButtonHit" destination="7qB-dN-VGW" id="M0Y-f2-CoL"/>
+                        <outlet property="ButtonStick" destination="RcM-j1-eUz" id="JW1-Ja-aIx"/>
+                        <outlet property="DealerFifthCard" destination="huq-Yy-NW1" id="eo3-rS-M2w"/>
+                        <outlet property="DealerFirstCard" destination="yVU-I9-fbw" id="TsM-G3-wKH"/>
+                        <outlet property="DealerFourthCard" destination="fCz-VY-1cJ" id="ZmW-YW-UA5"/>
+                        <outlet property="DealerSecondCard" destination="cbp-EV-jXH" id="FWG-3M-B8w"/>
+                        <outlet property="DealerThirdCard" destination="6Pg-ff-RgU" id="Kil-2F-xc2"/>
+                        <outlet property="LabelConvoText" destination="CU9-sq-1ya" id="8Yl-Fs-4to"/>
+                        <outlet property="LabelDealerScore" destination="xWg-42-G4j" id="raa-bJ-AzJ"/>
+                        <outlet property="LabelDealersHandTotal" destination="jLf-wE-EQ8" id="iso-VT-OGX"/>
+                        <outlet property="LabelPlayerScore" destination="c3V-CZ-KN8" id="lEk-wx-kVr"/>
+                        <outlet property="LabelPlayersHandTotal" destination="ysD-iv-CXX" id="UXI-yU-Jkl"/>
+                        <outlet property="PlayerFifthCard" destination="cdE-5I-8jm" id="OMd-op-vRS"/>
+                        <outlet property="PlayerFirstCard" destination="UiZ-DZ-KoL" id="6Ag-SB-ops"/>
+                        <outlet property="PlayerFourthCard" destination="QhW-We-7Py" id="yxr-J6-bOI"/>
+                        <outlet property="PlayerSecondCard" destination="7aA-Fv-If1" id="2eN-Dj-0CH"/>
+                        <outlet property="PlayerThirdCard" destination="Qah-vE-kQ1" id="3iG-Ab-onr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DHO-Xh-voU" userLabel="First Responder" sceneMemberID="firstResponder"/>

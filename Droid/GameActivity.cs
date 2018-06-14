@@ -10,7 +10,6 @@ using Android.OS;
 using Android.Views;
 using Android.Widget;
 using BlackJack.Droid;
-using BlackJackIOS;
 using DeckOfCards;
 
 namespace BlackJack

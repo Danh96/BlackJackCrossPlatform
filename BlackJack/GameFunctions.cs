@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using DeckOfCards;
 
-namespace BlackJackIOS
+namespace BlackJack
 {
     public class GameFunctions : INotifyPropertyChanged
     {

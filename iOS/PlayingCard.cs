@@ -5,7 +5,7 @@ using ObjCRuntime;
 using DeckOfCards;
 using System.Linq;
 
-namespace BlackJackIOS
+namespace BlackJack.iOS
 {
 	public partial class PlayingCard : UIView
     {
