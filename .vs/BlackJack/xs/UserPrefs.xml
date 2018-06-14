@@ -1,17 +1,11 @@
-﻿<Properties StartupConfiguration="{0A453088-143D-4C99-AD37-DD61BA38306A}|Default">
+﻿<Properties StartupConfiguration="{1C3F804E-967D-4311-A748-C5E40046649C}|Default">
   <MonoDevelop.Ide.ItemProperties.BlackJack.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.BDF5323F-D7CB-4F85-B834-5B216D952FBC" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/GameViewController.cs">
-    <Files>
-      <File FileName="iOS/GameViewController.cs" Line="21" Column="10" />
-      <File FileName="Droid/GameActivity.cs" Line="298" Column="32" />
-      <File FileName="BlackJack/GameFunctions.cs" Line="8" Column="20" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.BlackJack.Droid PreferredExecutionTarget="Android.Nexus_5X_API_25" />
+  <MonoDevelop.Ide.ItemProperties.BlackJack.Droid PreferredExecutionTarget="Android.ce12160c4016803501" />
 </Properties>
