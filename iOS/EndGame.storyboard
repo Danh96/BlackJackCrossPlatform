@@ -78,10 +78,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ButtonMainMenu" destination="hpp-jg-6lo" id="6wY-pn-h56"/>
-                        <outlet property="ButtonPlayAgain" destination="6FD-TM-A6A" id="qO7-u7-Qfc"/>
-                        <outlet property="LabelEndGamePoints" destination="X6d-xj-JvB" id="VoK-Xd-WvQ"/>
-                        <outlet property="LabelWinnerText" destination="jbF-vw-t4H" id="ZTF-y2-KeD"/>
+                        <outlet property="ButtonMainMenu" destination="hpp-jg-6lo" id="ako-tb-X86"/>
+                        <outlet property="ButtonPlayAgain" destination="6FD-TM-A6A" id="vxM-zG-oyR"/>
+                        <outlet property="LabelEndGamePoints" destination="X6d-xj-JvB" id="6jy-uK-TD7"/>
+                        <outlet property="LabelWinnerText" destination="jbF-vw-t4H" id="iFP-En-bpW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Eu-bG-LFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
