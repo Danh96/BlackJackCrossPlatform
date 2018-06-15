@@ -1,13 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,19 +31,17 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="jKL-xp-3Cg">
                                 <rect key="frame" x="29" y="244" width="317" height="179"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="jKL-xp-3Cg" secondAttribute="height" multiplier="317:179" id="MOt-kD-fLb"/>
-                                    <constraint firstAttribute="width" constant="317" id="aa9-Sg-ae7"/>
+                                    <constraint firstAttribute="width" constant="317" id="6v6-zz-RMW"/>
+                                    <constraint firstAttribute="height" constant="179" id="Foc-Dw-VCE"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jKL-xp-3Cg" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="13" id="4Ly-cP-i2r"/>
                             <constraint firstItem="KUK-KP-UAU" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="4VA-9l-zGy"/>
+                            <constraint firstItem="jKL-xp-3Cg" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="7FW-X0-t2C"/>
                             <constraint firstAttribute="trailing" secondItem="KUK-KP-UAU" secondAttribute="trailing" id="APK-SI-XF8"/>
-                            <constraint firstItem="jKL-xp-3Cg" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="224" id="FO5-80-ls6"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="jKL-xp-3Cg" secondAttribute="bottom" constant="244" id="XPF-hI-oUL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jKL-xp-3Cg" secondAttribute="trailing" constant="13" id="nQB-4F-HYv"/>
+                            <constraint firstItem="jKL-xp-3Cg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="HyJ-E7-xrk"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="KUK-KP-UAU" secondAttribute="bottom" id="rYt-as-NLg"/>
                             <constraint firstItem="KUK-KP-UAU" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="uBz-h7-xzj"/>
                         </constraints>
@@ -53,7 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="374.6627"/>
+            <point key="canvasLocation" x="52" y="374.66269999999997"/>
         </scene>
     </scenes>
     <resources>

@@ -48,8 +48,8 @@ namespace BlackJack
             base.OnCreate(savedInstanceState);
 
             gameFunctions.PropertyChanged += GameFunctions_PropertyChanged;
-            
-			SetContentView(Resource.Layout.Game);
+
+            SetContentView(Resource.Layout.Game);
 
 			playerGameScoreText = FindViewById<TextView>(Resource.Id.PlayerGameScore);
             dealerGameScoreText = FindViewById<TextView>(Resource.Id.DealerGameScore);
