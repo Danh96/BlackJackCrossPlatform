@@ -31,7 +31,9 @@ namespace BlackJack.iOS
 
             cardView.CardSuitImage.Image = GetcardSuit(card);
             cardView.CardValueTop.Text = GetCardValue(card);
+            cardView.CardValueTop.TextColor = UIColor.Black;
             cardView.CardValueBottom.Text = GetCardValue(card);
+            cardView.CardValueBottom.TextColor = UIColor.Black;
             cardView.CardBackgroundImage.Image = null;
 
             return cardView;
